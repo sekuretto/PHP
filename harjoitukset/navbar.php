@@ -1,0 +1,1 @@
+<p>&#91;<a href="harjoitus3_1.php">Tee ostoksia</a>&#93;&#91;<a href="harj3_1_ostoskori.php">Ostoskorin sisältö</a>&#93;</p>
