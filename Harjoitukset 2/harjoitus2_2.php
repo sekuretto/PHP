@@ -42,11 +42,13 @@
     <input type="submit" name="painike" value="Väritä">
     </form>
     </body>
+    </html>
     EOLomake;
     
     // Tulostetaan sivun osat näkyviin
     echo $head;
     echo $lomake;   
+
 ?>
 
 </html>
