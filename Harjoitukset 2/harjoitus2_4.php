@@ -5,8 +5,21 @@
 </head>
 <body>
     <?php
-        $nappi = isset($_GET['lkm']) ? $_GET['lkm'] : 0;
-        $nappi++;
+        session_start();
+
+        // $_SESSION['lkm'] alustetaan ensimmäisellä kerralla
+        if (!isset($_SESSION['lkm'])) {
+            $_SESSION['lkm'] = 0;
+        }
+
+        $nappi = "";
+        
+        // if button is pressed, increment counter
+        if(isset($_GET['painike'])) {
+            $_SESSION['lkm']++;
+            $nappi = "Olet ladannut sivun {$_SESSION['lkm']} kertaa!";
+        }                    
+           
         // http://netisto.fi/ttms0900-ttv18s3/harjoitukset/harjoitukset2.html
         // echo "Yksi kerta riittää";
         // echo "Kaksi kertaa riittää";
@@ -16,22 +29,6 @@
         $variable='myvalue';
         echo ‘<input type=”text” id=”username” value=”'.$variable.'”/>'; 
         */
-       /*  switch ($nappi)
-        {
-           case 1: // Jos muuttujan $action arvo on "summa", suoritetaan rivit:
-                echo "Yksi kerta riittää";
-                break;
-           case 2:
-                echo "Kaksi kertaa riittää";
-                break;
-           case 3:
-                echo "Kolme kertaa riittää";
-                $nappi = 0;
-                break;
-           default:
-                echo "Virhe: Laskutoimitusta ei ole määritelty";
-                break;
-        } */
 
         /* 
         <?php
