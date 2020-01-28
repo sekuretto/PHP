@@ -43,7 +43,7 @@
 			<small>Created on <?php echo $post['created_at']; ?> by <?php echo $post['author']; ?></small>
 			<p><?php echo $post['body']; ?></p>
 			<hr>
-			<form class="pull-right" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+			<form class="float-right" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 				<input type="hidden" name="delete_id" value="<?php echo $post['id']; ?>">
 				<input type="submit" name="delete" value="Delete" class="btn btn-danger"><br><br>
 			</form>
