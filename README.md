@@ -1,5 +1,6 @@
 # Web-palvelinohjelmointi
  Web-palvelinohjelmointi -kurssin (TTMS0900, kevät 2020) harjoituksia ja harjoitustyö
+ Sisältää myös muuta PHP-harjoittelua ja kokeilua.
  
  Kurssimateriaalit: Ari Rantala (JAMK)
 
