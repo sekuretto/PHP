@@ -13,5 +13,4 @@
     echo "<img src='$kuva1.jpg' />";
     echo "<img src='$kuva2.jpg' />";
     echo "<img src='$kuva3.jpg' />";
-
 ?>
