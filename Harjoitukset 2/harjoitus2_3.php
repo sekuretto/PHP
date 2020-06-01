@@ -4,7 +4,7 @@
     <title>Harjoitukset 2: Tehtävä 3</title>
 </head>
 <body>
-    <form method="post">
+    <form method="post" action="{$_SERVER['PHP_SELF']}">
         <select name="aiheet[]" size="3" multiple>
             <option value="anime">Anime</option>
             <option value="musiikki">Musiikki</option>
@@ -30,7 +30,7 @@
                     if ($aihe == "anime") {
                         echo "Päivää animen ystävä, tässäpä muutama linkki<br/><ul><li><a href='https://anidb.net/'>AniDB</a></li><li><a href='https://horriblesubs.info/'>HorribleSubs</a></li><li><a href='https://nyaa.si'>Nyaa</a></li></ul>";
                     } elseif ($aihe == "musiikki") {
-                        echo "Päivää musiikin ystävä, tässäpä muutama linkki<br/><ul><li><a href='https://music.youtube.com/'>Youtube Music</a></li></ul>";
+                        echo "Päivää musiikin ystävä, tässäpä muutama linkki<br/><ul><li><a href='https://music.youtube.com/'>Youtube Music</a></li><li><a href='https://www.spotify.com/fi/'>Spotify</a></li></ul>";
                     } elseif ($aihe == "tietokoneet") {
                         echo "Päivää tietokoneiden ystävä, tässäpä muutama linkki<br/><ul><li><a href='https://www.mikrobitti.fi/'>Mikrobitti</a></li><li><a href='https://www.verkkokauppa.com/fi/catalog/5a/Tietokoneet'>Verkkokauppa.com - Tietokoneet</a></li></ul>";
                     } elseif ($aihe == "uutiset") {

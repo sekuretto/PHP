@@ -29,9 +29,9 @@
     <!-- htmlspecialchars -function converts special characters to HTML entities -->
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <p><strong>Mikä on?</strong><br> 
-        <label>Väsy</label><input type="checkbox" name="on_vasy" value="väsy" <?php echo $on_vasy;?>><br/>
-        <label>Pää kipiä</label><input type="checkbox" name="on_paapipi" value="pää kipiä" <?php echo $on_paapipi;?>><br/>
-        <label>Perjantai</label><input type="checkbox" name="on_pe" value="perjantai" <?php echo $on_pe;?>><br/>
+        <label>Väsy</label><input type="checkbox" name="on_vasy" value="väsy" <?php if(isset($_POST['on_vasy'])) echo "checked='checked'"; ?>><br/>
+        <label>Pää kipiä</label><input type="checkbox" name="on_paapipi" value="pää kipiä" <?php if(isset($_POST['on_paapipi'])) echo "checked='checked'"; ?>><br/>
+        <label>Perjantai</label><input type="checkbox" name="on_pe" value="perjantai" <?php if(isset($_POST['on_pe'])) echo "checked='checked'"; ?>><br/>
         <input type="submit" name="submit" value="Kerro tunne"/>
     </form>
 

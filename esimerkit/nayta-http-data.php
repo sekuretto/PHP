@@ -3,10 +3,9 @@
 
    header('Content-type: text/html');
 
-echo "<h3>HTTP-otsakkeet</h3>
-";
+echo "<h3>HTTP-otsakkeet</h3>";
+
    foreach($_SERVER as $h=>$v)
-   {}
      if(ereg('HTTP_(.+)',$h,$hp))
        echo "<li>$h = $v</li>
 ";
