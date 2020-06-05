@@ -4,7 +4,7 @@
     <title>Harjoitukset 2: Tehtävä 3</title>
 </head>
 <body>
-    <form method="post" action="{$_SERVER['PHP_SELF']}">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <select name="aiheet[]" size="3" multiple>
             <option value="anime">Anime</option>
             <option value="musiikki">Musiikki</option>

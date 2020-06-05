@@ -5,35 +5,21 @@
 </head>
 <body>
     <?php
-        
         session_start();
-        $nappi = "";
 
         // $_SESSION['lkm'] alustetaan ensimmäisellä kerralla
         if (!isset($_SESSION['lkm'])) {
             $_SESSION['lkm'] = 0;
         }
 
+        $nappi = "";
+        
         // if button is pressed, increment counter
         if(isset($_GET['painike'])) {
             $_SESSION['lkm']++;
-            
-            switch ($_SESSION['lkm']) {
-                case "1":
-                    $nappi = "Yksi kerta riittää";
-                    break;
-                case "2":
-                    $nappi = "Kaksi kertaa riittää";
-                    break;
-                case "3":
-                    $nappi = "Kolme kertaa riittää";
-                    break;
-                default:
-                    $_SESSION['lkm'] = 0;
-                    $nappi = "";
-            }
-        }
-        
+            $nappi = "Olet ladannut sivun {$_SESSION['lkm']} kertaa!";
+        }                    
+    
         $hullunappi = <<< EONappi
         <form action="{$_SERVER['PHP_SELF']}" method="get">
             <input type="submit" name="painike" value="Paina minua">

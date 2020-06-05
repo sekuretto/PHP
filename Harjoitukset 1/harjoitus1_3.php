@@ -10,6 +10,8 @@
 </form>
 
 <?php
+    // Kirjoita funktio, joka tulostaa kuvaruudulle (selainikkunaan) funktiolle parametrina annetun määrän tähtiä. Tee myös pääohjelma, josta kutsut tekemääsi funktiota.
+
     if (!isset($_REQUEST['nappi'])) exit;
     
     $tahdet = $_REQUEST['luku'];
