@@ -11,5 +11,7 @@ $lkm++;
 // Tulostetaan latauskerrat
 echo "Olet ladannut sivun <b>$lkm</b> kertaa!";
 
-// Tallennetaan nykyiset latauskerrat selaimen evästeeksi
+// Tallennetaan nykyiset latauskerrat selaimen evästeeksi (vuorokaudeksi)
 setcookie ("lkm", "$lkm" , time()+86400);
+
+?>

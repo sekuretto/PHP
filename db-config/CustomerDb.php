@@ -6,7 +6,7 @@ class CustomersDb {
   public function __construct() {
     try {
         $this->dbConnection = new PDO('mysql:host=mysql.labranet.jamk.fi;dbname=N1234;charset=utf8',
-                  'N1234', 'se-pitka-mysql-salasana');
+                  'K8691', 'mjJEVf133cWUTxTVNtW9V8E3Q1RNxkqV');
         //$this->dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
         //$this->dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
          $this->dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -69,34 +69,4 @@ EndOfSQL;
     return $addResult;
   }
 
-    /******************************************  updateCustomer   ***********************************/
-
-    public function updateCustomer($id, $name, $birth_date) {
-        $updateResult = 0;
-    
-    
-        $sql = <<<EndOfSQL
-          UPDATE customer 
-          SET name = :name, birth_date = :birth_date
-          WHERE id = :id
-    EndOfSQL;
-    
-    
-        $result = $this->dbConnection->prepare($sql);
-        $result->bindValue(':id', $id, PDO::PARAM_STR);
-        $result->bindValue(':name', $name, PDO::PARAM_STR);
-        $result->bindValue(':birth_date', $birth_date, PDO::PARAM_STR);
-        $result->execute(); 
-    
-        if ($result->rowCount() == 1) {
-          $updateResult = 1;
-        } else {
-          $updateResult = 0;
-        }
-    
-        return $updateResult;
-      }
-
 }
-
-?>
